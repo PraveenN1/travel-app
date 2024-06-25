@@ -13,7 +13,7 @@ const Hero = () => {
         className="absolute left-[-5px] top-[-30px] w-10 lg:w=[50px]"/>
         <h1 className="mt-2 bold-52 lg:bold-80 text-balance">{HERO.title}</h1>
         <p className="regular-16 mt-6 text-gray-30 ">{HERO.label}</p>
-        <div className="my-11 flex gap-5">
+        <div className="my-11 flex gap-5 ">
           <div className="items-center gap-2 flex flex-wrap">
             {Array(5).fill(1).map((_,index)=>(
               <Image
@@ -31,7 +31,7 @@ const Hero = () => {
           </p>
         </div>
         {/* wrapper for buttons */}
-        <div className="w-full ">
+        <div className="w-full flex flex-col sm:flex-row">
             <Button
               type="button"
               title="Download App"
@@ -39,7 +39,7 @@ const Hero = () => {
               />
             <Button
               type="button"
-              title="How we word?"
+              title="How we work?"
               icon="/play.svg"
               variant="btn_white_text"
             />
