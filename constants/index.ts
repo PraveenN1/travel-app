@@ -84,3 +84,8 @@ export const SOCIALS = {
     '/wordpress.svg',
   ],
 };
+
+export const HERO = {
+  title:"Halcyon Haven Camp Area",
+  label:"Embark on a journey with WanderLust Camping Adventures, your ultimate guide to exploring the great outdoors. Whether you're a seasoned camper or new to the wilderness, we offer personalized experiences to suit every adventurer's needs."
+};
