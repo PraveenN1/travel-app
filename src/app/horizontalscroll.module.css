@@ -1,0 +1,64 @@
+.scrollContainer {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    margin: auto;
+}
+
+.scrollWrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+}
+
+.scrollWrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollWrapper {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.scrollWrapper:active {
+    cursor: grabbing;
+}
+
+.card {
+    min-width:800px;
+    margin: 10px;
+    border-radius :24px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    user-select: none;
+}
+
+.scrollButton {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    user-select: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.scrollButton.left {
+    left: 0;
+}
+
+.scrollButton.right {
+    right: 0;
+}
+
+.scrollButton:focus {
+    outline: none;
+}
