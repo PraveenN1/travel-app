@@ -47,6 +47,9 @@ module.exports = {
       borderRadius: {
         '5xl': '40px',
       },
+      fontFamily:{
+        playwrite:["Playwrite DE Grund", 'cursive'],
+      },
     },
   },
   plugins: [],

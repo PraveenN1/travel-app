@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Button from './Button'
 import { HERO } from '../../constants'
+import Link from 'next/link'
 
 const Hero = () => {
   return (
@@ -45,12 +46,15 @@ const Hero = () => {
             title="Download App" 
             variant="btn_green" 
           />
+          <Link
+            href="/works">
           <Button 
             type="button" 
             title="How we work?" 
             icon="/play.svg"
             variant="btn_white_text" 
           />
+          </Link>
         </div>
       </div>
 

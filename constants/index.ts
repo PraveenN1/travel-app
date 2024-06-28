@@ -1,10 +1,10 @@
 // NAVIGATION
 export const NAV_LINKS = [
   { href: '/', key: 'home', label: 'Home' },
-  { href: '/', key: 'how_hilink_work', label: 'How Hilink Work?' },
-  { href: '/', key: 'services', label: 'Services' },
-  { href: '/', key: 'pricing ', label: 'Pricing ' },
-  { href: '/', key: 'contact_us', label: 'Contact Us' },
+  { href: '/works', key: 'how_hilink_work', label: 'How Hilink Work?' },
+  { href: '/services', key: 'services', label: 'Services' },
+  { href: '/pricing', key: 'pricing ', label: 'Pricing ' },
+  { href: '/contact-us', key: 'contact_us', label: 'Contact Us' },
 ];
 
 // CAMP SECTION
@@ -89,3 +89,46 @@ export const HERO = {
   title:"Halcyon Haven Camp Area",
   label:"Embark on a journey with WanderLust Camping Adventures, your ultimate guide to exploring the great outdoors. Whether you're a seasoned camper or new to the wilderness, we offer personalized experiences to suit every adventurer's needs."
 };
+
+export const SERVICES =[
+  {
+    title:'Custom Camping Packages',
+    image:'/service1.png',
+    description:'Tailored camping experiences to meet individual preferences, including location, duration, and activities',
+  },
+  {
+    title:'Guided Tours and Activities',
+    image:'/service2.png',
+    description:"Professional guides for hiking, fishing, kayaking, and other outdoor activities"
+  },
+  {
+    title:'Equipment Rental',
+    image:'/service3.jpg',
+    description:"High-quality camping gear rental, including tents, sleeping bags, cooking equipment, and more..."
+  },
+  {
+    title:'Transportation Services',
+    image:'/service4.png',
+    description:"Shuttle services to and from the campsite.Transportation for guided tours and activities."
+  },
+  {
+    title:'Meal Plans and Cooking Services',
+    image:'/service5.png',
+    description:"Pre-prepared meal plans with options for breakfast, lunch, and dinner"
+  },
+  {
+    title:'Safety and Emergency Support',
+    image:'/service6.png',
+    description:"24/7 emergency support and assistance.On-site first aid and safety briefings."
+  },
+  {
+    title:'Family and Group Packages:',
+    image:'/service7.png',
+    description:"Special packages for families and large groups, including team-building activities and family-friendly adventures."
+  },
+  {
+    title:'Educational Workshops and Programs:',
+    image:'/service8.png',
+    description:"Workshops on outdoor skills, survival techniques, and environmental education.Programs for children and adults to learn about nature and wildlife."
+  },
+]

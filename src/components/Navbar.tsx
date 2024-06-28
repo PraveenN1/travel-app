@@ -19,12 +19,16 @@ export default function Navbar() {
           ))}
         </ul>
         <div className="lg:flexCenter hidden">
+          <Link
+            href="/login"
+          >
           <Button 
             type="button"
             title="Login"
             icon="/user.svg"
             variant="btn_dark_green"
             />
+          </Link>
         </div>
         <Image
           src="menu.svg"
