@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import React from "react";
+
 export const metadata: Metadata = {
   title: "TravelApp | Pricing",
   description: "pricing plans",
@@ -8,14 +10,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body >
+    <>
         {children}
-      </body>
-    </html>
+        <Footer/>
+    </>
   );
 }
