@@ -6,8 +6,8 @@ import Button from "@/components/Button";
 export default function Pricing() {
     return (
         <div className="flex flex-col items-center justify-center bg-gray-100 p-5 ">
-            <h1 className="text-6xl font-bold mb-4">Pricing Plans</h1> 
-            <h2 className="text-2xl font-semibold mb-2">Choose a plan that's right for you</h2>
+            <h1 className="text-6xl text-center text-balance font-bold mb-4">Pricing Plans</h1> 
+            <h2 className="text-2xl text-center font-semibold mb-2">Choose a plan that's right for you</h2>
             <p className="text-lg m-3 text-balance text-center">We offer a variety of pricing plans to suit different needs and preferences. Whether you're looking for a basic camping experience or an all-inclusive adventure, we have a plan for you.</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 ">
                 {PRICING.map((plan, index) => (
