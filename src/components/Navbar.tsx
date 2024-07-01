@@ -4,9 +4,9 @@ import Link from "next/link"
 import { NAV_LINKS } from "../../constants"
 import Button from "./Button"
 import { useState } from "react"
-
+import { useSession, signIn, signOut } from "next-auth/react";
 export default function Navbar() {
-
+  const { data: session } = useSession();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuToggle = () => {
@@ -28,17 +28,26 @@ export default function Navbar() {
         ))}
       </ul>
       <div className="lg:flexCenter hidden">
-        <Link
-          href="/login"
-        >
-          <Button
-            type="button"
-            title="Login"
-            icon="/user.svg"
-            variant="btn_dark_green"
-          />
-        </Link>
-      </div>
+                {session ? (
+                    <Link href="/login" onClick={()=>signOut()}>
+                    <Button
+                      type="button"
+                      title="Sign Out"
+                      icon="/user.svg"
+                      variant="btn_dark_green"
+                    />
+                  </Link>
+                ) : (
+                  <Link href="/login" onClick={()=>signIn()}>
+                  <Button
+                    type="button"
+                    title="Login"
+                    icon="/user.svg"
+                    variant="btn_dark_green"
+                  />
+                </Link>
+                )}
+            </div>
       <div className="lg:hidden">
           <Image
             src={isMenuOpen?"cross.svg":"menu.svg"}
