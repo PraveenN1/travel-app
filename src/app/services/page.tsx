@@ -4,17 +4,18 @@ import { SERVICES } from '../../../constants';
 
 export default function Services() {
     return (
-        <section className="max-container">
+        <section className="max-container ">
             {/* Hero */}
             <div className="max-container padding-container flexCenter min-h-[500px] lg:min-h-[400px] bg-[url('/serviceshero.png')] bg-cover bg-center backdrop-blur-[2px] ">
                 <div className="flex flex-col items-center text-balance gap-10">
                     <h1 className="text-6xl pt-4 md:text-7xl lg:text-9xl uppercase playwrite font-semibold text-black ">Services</h1>
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/90 group-hover:via-black/80 group-hover:to-black/90"></div>
-                    <p className="text-xl md:text-2xl text-center text-[#ffffff] backdrop-blur-[2px] italic font-sans p-4 ">We offer a variety of services to make your camping experience unforgettable. From personalized trip planning to guided tours, our team is dedicated to ensuring you have a seamless and enjoyable adventure.</p>
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent -z-10 via-transparent to-black group-hover:from-black/90 group-hover:via-black/80 group-hover:to-black/90"></div>
+                    <p className="text-xl md:text-2xl text-center text-[#ffffff]  italic p-4 ">We offer a variety of services to make your camping experience unforgettable. From personalized trip planning to guided tours, our team is dedicated to ensuring you have a seamless and enjoyable adventure.</p>
                 </div>
             </div>
             {/* Services Cards */}
-            <div className="max-container padding-container flex flex-col justify-center mb-24">
+            <div className="max-container padding-container flex flex-col justify-center mb-24 bg-gradient-to-b ">
+                <div></div>
                 <p className="text-2xl font-sans text-center m-5 p-5 lg:text-4xl">Discover our comprehensive range of services below</p>
                 <div className="m-5 p-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                     {SERVICES.map((service, index) => (
@@ -39,7 +40,7 @@ type CardItemProps = {
 
 const Card: React.FC<CardItemProps> = ({ title, image, description }) => {
     return (
-        <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 rounded-lg">
+        <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 rounded-lg font-serif">
             <div className="relative h-80 w-full overflow-hidden rounded-lg">
                 <Image
                     src={image}
