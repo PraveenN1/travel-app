@@ -66,7 +66,7 @@ const Camp = () => {
           peopleJoined="50+ Joined"
         />
       </div>
-      <div className="flex justify-end mr-24 -translate-y-52 ">
+      <div className="flex justify-center mr-8 -translate-y-22  md:justify-end md:-translate-y-24 lg:-translate-y-36 lg:justify-center">
       <CardStack items={CARDS}/>
       </div>
     </section>
