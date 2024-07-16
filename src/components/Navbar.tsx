@@ -5,6 +5,8 @@ import { NAV_LINKS } from "../../constants"
 import Button from "./Button"
 import { useState } from "react"
 import { useSession, signIn, signOut } from "next-auth/react";
+import { usePathname } from "next/navigation";
+
 export default function Navbar() {
   const { data: session } = useSession();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,6 +14,8 @@ export default function Navbar() {
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const pathname=usePathname();
 
   return (
     <nav className="
@@ -22,7 +26,7 @@ export default function Navbar() {
       <ul className="hidden h-full gap-12 lg:flex ">
   
         {NAV_LINKS.map((link) => (
-          <Link href={link.href} key={link.key} className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold">
+          <Link href={link.href} key={link.key} className={`regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold hover:text-green-50 link ${pathname===link.href ? 'text-green-50 font-extrabold':''}`} >
             {link.label}
           </Link>
         ))}
