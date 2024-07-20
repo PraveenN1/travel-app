@@ -2,8 +2,6 @@
 import React, { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import Image from "next/image";
-import {PhoneInput} from "react-international-phone";
-import "react-international-phone/style.css";
 
 type FormValues = {
   firstName: string;
@@ -16,15 +14,8 @@ type FormValues = {
 export default function Contact() {
   const { register, handleSubmit, formState: { errors }, setValue } = useForm<FormValues>();
 
-  const [phone, setPhone] = useState("");
-
   const onSubmit: SubmitHandler<FormValues> = (data) => {
     console.log(data);
-  };
-
-  const handlePhoneChange = (phone: string) => {
-    setPhone(phone);
-    setValue("phone", phone);
   };
 
   return (
@@ -84,19 +75,19 @@ export default function Contact() {
             {errors.email && <p className="text-red-500">{errors.email.message}</p>}
 
             <div className="w-full">
-              <PhoneInput
-                defaultCountry="in"
-                value={phone}
-                onChange={handlePhoneChange}
+              <input
+                {...register("phone", {
+                  required: "Phone Number is required",  
+      
+                })}
+                className="p-2 rounded-md w-full"
                 placeholder="Phone Number"
-                className=""
               />
               {errors.phone && <p className="text-red-500">{errors.phone.message}</p>}
               {/* Hidden input to register phone number */}
               <input
                 type="hidden"
                 {...register("phone", { required: "Phone number is required" })}
-                value={phone}
               />
             </div>
 
