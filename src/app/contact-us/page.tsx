@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import Image from "next/image";
+import FAQ from "./faq";
 
 type FormValues = {
   firstName: string;
@@ -19,6 +20,7 @@ export default function Contact() {
   };
 
   return (
+    <div>
     <section className="max-container padding-container mb-5 h-auto flex flex-col md:flex-row">
       <div className="w-full bg-slate-100 flex flex-col gap-3 items-center justify-center">
         <h1 className="m-5  text-4xl lg:text-7xl font-bold">Contact Us</h1>
@@ -108,5 +110,9 @@ export default function Contact() {
         </form>
       </div>
     </section>
+    <section className="max-container padding-container mb-5 h-50">
+        <FAQ/>
+    </section> 
+    </div>
   );
 }
