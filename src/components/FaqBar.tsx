@@ -15,10 +15,10 @@ export default function FaqBar() {
     };
 
     return (
-        <div className="w-[600px]  p-2">
+        <div className="w-[350px] sm:w-[500px] md:w-[600px] lg:w-[800px] h-auto p-2 mb-10">
             {FAQ.map((item, index) => (
                 <div key={index} className="mb-4">
-                    <div className="flex justify-between items-center cursor-pointer" onClick={() => handleToggle(index)}>
+                    <div className="flex justify-between items-center cursor-pointer border-2 rounded-xl m-2 p-4" onClick={() => handleToggle(index)}>
                         <div className="text-lg font-semibold">
                             {item.question}
                         </div>
@@ -26,11 +26,13 @@ export default function FaqBar() {
                             {activeIndex === index ? <IoIosArrowDropup /> : <IoIosArrowDropdown />}
                         </div>
                     </div>
-                    {activeIndex === index && (
-                        <div className="mt-2 text-gray-700">
+                    <div
+                        className={`overflow-hidden transition-all duration-500 ease-in-out ${activeIndex === index ? 'max-h-[200px] opacity-100' : 'max-h-0 opacity-0'}`}
+                    >
+                        <div className="text-gray-700 m-2 p-2 ">
                             {item.answer}
                         </div>
-                    )}
+                    </div>
                 </div>
             ))}
         </div>
