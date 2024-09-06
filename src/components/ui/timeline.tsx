@@ -39,11 +39,11 @@ export const Timeline=({data}:{data:TimelineEntry[]})=>{
           className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
           ref={containerRef}
         >
-          <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-            <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
+          <div className="max-w-7xl flex-1 mx-auto pt-10 px-4 md:px-8 lg:px-10 ">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl text-center mb-4 text-black dark:text-white font-bold">
               How We Work ?
-            </h2>
-            <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
+            </h1>
+            <p className=" text-center dark:text-neutral-300 text-md md:text-lg w-full">
             Discover the easiest way to plan a memorable camping adventure. Choose from a variety of customizable camping packages, book online, and let us handle all logistics, from transportation to camping gear. With our expert guidance and seamless process, enjoy a stress-free outdoor experience tailored to your needs.
             </p>
           </div>
@@ -82,7 +82,7 @@ export const Timeline=({data}:{data:TimelineEntry[]})=>{
                   height: heightTransform,
                   opacity: opacityTransform,
                 }}
-                className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
+                className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-green-500 via-green-800 to-transparent from-[0%] via-[50%] rounded-full"
               />
             </div>
           </div>
