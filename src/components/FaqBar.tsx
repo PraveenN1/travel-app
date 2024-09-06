@@ -18,7 +18,7 @@ export default function FaqBar() {
         <div className="w-[350px] sm:w-[500px] md:w-[600px] lg:w-[800px] h-auto p-2 mb-10">
             {FAQ.map((item, index) => (
                 <div key={index} className="mb-4">
-                    <div className="flex justify-between items-center cursor-pointer border-2 rounded-xl m-2 p-4" onClick={() => handleToggle(index)}>
+                    <div className={`flex justify-between items-center cursor-pointer border-2 rounded-xl m-2 p-4 shadow-sm ${activeIndex === index ? 'shadow-xl' : 'shadow-sm'} `}onClick={() => handleToggle(index)}>
                         <div className="text-lg font-semibold">
                             {item.question}
                         </div>
