@@ -35,17 +35,17 @@ const Guide = () => {
               <div>
                 <div className="flex flex-row gap-12">
                   <p className="text-gray-20">Destination</p>
-                  <p className="text-green-50 bold-16 ">48 min</p>
+                  <p className="text-green-50 bold-16 ">25 min</p>
                 </div>
-                <p className="bold-20">Aguas Calientes
+                <p className="bold-20">Jabeli
                 </p>                
               </div>
               <div>
                 <div className="flex flex-row gap-12">
-                  <p className="text-gray-20">Start track</p>
+                  <p className="text-gray-20 mr-28">Start track</p>
                 </div>
-                <p className="bold-20 whitespace-nowrap">   
-                Wonorejo Pasuruan
+                <p className="bold-20">   
+                Phirdi
                 </p>                
               </div>
               
