@@ -19,14 +19,14 @@ export default function Navbar() {
 
   return (
     <nav className="
-     shadow-lg flexBetween max-container padding-container z-50  py-5 sticky top-0 bg-white ">
+     shadow-lg flexBetween max-container padding-container z-50 py-5 md:max-w-[80%] md:rounded-full  sticky top-5 bg-white mb-8">
       <Link href='/'>
         <Image src="/hilink-logo.svg" alt="logo" width={74} height={29} />
       </Link>
       <ul className="hidden h-full gap-12 lg:flex ">
   
         {NAV_LINKS.map((link) => (
-          <Link href={link.href} key={link.key} className={`regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold hover:text-green-50 link ${pathname===link.href ? 'text-green-50 font-extrabold':''}`} >
+          <Link href={link.href} key={link.key} className={`text-lg font-semibold text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold hover:text-green-50 link ${pathname===link.href ? 'text-green-50 font-extrabold':''}`} >
             {link.label}
           </Link>
         ))}
