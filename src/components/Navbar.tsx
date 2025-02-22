@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <nav className="
-     shadow-lg flexBetween max-container padding-container z-50 py-5 md:max-w-[80%] md:rounded-full  sticky top-5 bg-white mb-8">
+     shadow-lg flexBetween max-container padding-container z-50 py-5 md:max-w-[80%] md:rounded-full sticky top-5 bg-white mb-8">
       <Link href='/'>
         <Image src="/hilink-logo.svg" alt="logo" width={74} height={29} />
       </Link>
